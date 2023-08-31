@@ -121,23 +121,23 @@
         static String computerChoose(String[] choices)
         {
             Random randomChoice = new Random();
-            int randomNum = randomChoice.Next(1, 4);
+            int randomNum = randomChoice.Next(0, 3);
             String computerChoice = "";
 
             switch (randomNum)
             {
+                case 0:
+                    computerChoice = choices[0];
+
+                    break;
+
                 case 1:
-                    computerChoice = "PIEDRA";
+                    computerChoice = choices[1];
 
                     break;
 
                 case 2:
-                    computerChoice = "PAPEL";
-
-                    break;
-
-                case 3:
-                    computerChoice = "TIJERA";
+                    computerChoice = choices[2];
 
                     break;
             }
